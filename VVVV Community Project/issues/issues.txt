@@ -1,0 +1,5 @@
+H99 said:
+	on my system, "Phong_MRT_VSM" in \VVVV Community Project\modules, just opening Root_patch and doing nothing, gets modified and asks to be saved. Is it normal?
+
+tekcor said: 
+	sorry wrong fx path was saved. should work now. basically we have this engine thrown together from the MRE and motionblur 		from nice contributions. any thoughts on what else we could do on the graphics side (beside multiple lights)? i know that it's not 	the most important part 	for now, but wanted to bring this down as a template and to keep us motivated by having fast 	results. i'm still thinking on where 	in the patch and how we store and manage the different sets of character animation we 	might have in the future. i'll dig into this invers kinematics stuff and make some tests these days.

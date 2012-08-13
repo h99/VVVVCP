@@ -1,0 +1,5 @@
+The long term goal is to create a creature which interacts with people on an emotional and spatial level in an immersive way.
+and the challenge is to let a insectoid robot express a wide spectrum of emotions from friendly to aggressive.
+
+H99 said:
+	I suggest that the behavior of the creature should be stimulated by not only the behavior of the users, but also by their "dimension", so that 	with a child the creature would be mostly friendly (and curious as the child?) and instead with a tall, large shoulder man could be 	"suspectful". Then the behavior: somewhat like in real life, where animals try to seem bigger to scare opponents, opening the arms would be a 		way to scare the C (yes, this put hugs outside of usable expressions... mmmh... maybe not) , leaning hands towards it a friendly act, beeing 	on knees could lead to make the C dominating, etc.

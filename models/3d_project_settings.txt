@@ -1,0 +1,18 @@
+**3d_project_settings**
+**This file is meant to set the required nodes so to achieve**
+**the best coordination between all of the contributors**
+
+As probably we will have to face the chance that multiple 3d Model Editors (3dme) will be used in this project I'd suggest following
+
+PROJECT SETTINGS:
+
+Project Units: Centimeter
+Axis Scale: 1
+Axis: Left Handed
+	Positive X: to your right
+	Negative X: to your left
+Up Axis: Y
+Depth Axis: Z (depth positive values away from screen; negative towards screen)
+
+**please add here
+**probably also an approximate bounding box for monster should be pointed out...

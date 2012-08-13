@@ -1,0 +1,253 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.2.dtd" >
+   <PATCH nodename="D:\Dropbox\CP_3dmodeling\VVVV Community Project\modules\SkeletonAnimation.v4p" systemname="SkeletonAnimation" filename="D:\VVVV_Projekte\VVVV Community Project\modules\SkeletonAnimation.v4p">
+   <BOUNDS type="Window" left="4800" top="1980" width="17670" height="11160">
+   </BOUNDS>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\SkeletonNodes.dll" id="13" nodename="SetJoint (Skeleton)" systemname="SetJoint (Skeleton)">
+   <BOUNDS height="100" left="6075" top="3585" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Skeleton" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Joint Name" visible="1">
+   </PIN>
+   <PIN pinname="Base Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Animation Transform" visible="1">
+   </PIN>
+   <PIN pinname="Parent Name" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="7275" top="1245" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7275" top="1245" width="930" height="630">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="2" encoded="0" values="Head2,Head1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output String" dstnodeid="13" dstpinname="Joint Name">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="11">
+   <BOUNDS type="Node" left="6225" top="1230" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6225" top="1230" width="900" height="660">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="2" encoded="0" values="Head1,Neck2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="13" dstpinname="Parent Name">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="6585" top="3105" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Transform Out" dstnodeid="13" dstpinname="Animation Transform">
+   </LINK>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="6810" top="2715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0.68">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="-0.69">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="10" dstpinname="X">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\SkeletonNodes.dll" id="8" nodename="SetJoint (Skeleton)" systemname="SetJoint (Skeleton)">
+   <BOUNDS height="100" left="2850" top="3570" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Skeleton" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Joint Name" visible="1">
+   </PIN>
+   <PIN pinname="Base Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Animation Transform" visible="1">
+   </PIN>
+   <PIN pinname="Parent Name" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="4140" top="1215" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4140" top="1215" width="930" height="630">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="2" encoded="0" values="Head2,Head1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="8" dstpinname="Joint Name">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="6">
+   <BOUNDS type="Node" left="3015" top="1200" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3015" top="1200" width="900" height="660">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="2" encoded="0" values="Head1,Neck2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="8" dstpinname="Parent Name">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="3375" top="3000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="8" dstpinname="Animation Transform">
+   </LINK>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3600" top="2610" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="-0.68">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1.64">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="X">
+   </LINK>
+   <NODE systemname="GetJointTransform (Skeleton)" filename="%VVVV%\addonpack\lib\nodes\plugins\SkeletonNodes.dll" nodename="GetJointTransform (Skeleton)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="7425" top="7350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Skeleton" visible="1">
+   </PIN>
+   <PIN pinname="Joint Name" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LFO (Value Advanced)" filename="LFO (Value Advanced).v4p" nodename="LFO (Value Advanced)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2430" top="4830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shape" slicecount="1" values="Sine">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Max" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="6165" top="1110" width="12015" height="6075">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="InputMorph (Skeleton)" nodename="InputMorph (Skeleton)" componentmode="Hidden" id="0" filename="%VVVV%\addonpack\lib\nodes\plugins\SkeletonNodes.dll">
+   <BOUNDS type="Node" left="2430" top="5475" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Pose 1" visible="1">
+   </PIN>
+   <PIN pinname="Pose 2" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Mixed Pose" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Skeleton" dstnodeid="0" dstpinname="Pose 1">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Skeleton" dstnodeid="0" dstpinname="Pose 2">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Mixed Pose" dstnodeid="3" dstpinname="Skeleton">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="14" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="7440" top="9900" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7440" top="9900" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Transform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Transform" dstnodeid="14" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="15" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="2880" top="45" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2880" top="45" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Skeleton">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output Node" dstnodeid="8" dstpinname="Skeleton">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output Node" dstnodeid="13" dstpinname="Skeleton">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="8835" top="120" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8835" top="120" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Joint Name|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output String" dstnodeid="3" dstpinname="Joint Name">
+   </LINK>
+   <NODE systemname="SelectJoint (Skeleton GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\SkeletonNodes.dll" nodename="SelectJoint (Skeleton GUI)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="2415" top="6585" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2415" top="6585" width="3000" height="1500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7230" top="9195" width="6000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Skeleton" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Mixed Pose" dstnodeid="18" dstpinname="Skeleton">
+   </LINK>
+   </PATCH>
