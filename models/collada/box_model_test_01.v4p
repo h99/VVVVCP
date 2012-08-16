@@ -1,0 +1,167 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="G:\Dropbox\CP_3dmodeling\models\collada\box_model_test_01.v4p" filename="G:\Dropbox\CP_3dmodeling\models\collada\box_model_test_01.v4p" systemname="box_model_test_01">
+   <BOUNDS height="6165" left="2745" top="5700" type="Window" width="11625">
+   </BOUNDS>
+   <NODE id="23" componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\ColladaLoader.dll" nodename="ColladaFile (EX9.Geometry)" systemname="ColladaFile (EX9.Geometry)">
+   <PIN pinname="Coordinate system of source" slicecount="1" values="LeftHanded">
+   </PIN>
+   <PIN pinname="Filename" visible="1" encoded="0">
+   </PIN>
+   <BOUNDS type="Node" height="0" left="2895" top="1260" width="0">
+   </BOUNDS>
+   <BOUNDS type="Box" height="0" left="2895" top="1260" width="0">
+   </BOUNDS>
+   <BOUNDS type="Window" height="0" left="6480" top="3570" width="0">
+   </BOUNDS>
+   <PIN pinname="COLLADA Model" visible="1">
+   </PIN>
+   <PIN pinname="Source up axis" slicecount="1" values="Y">
+   </PIN>
+   <PIN pinname="Source right axis" slicecount="1" values="X">
+   </PIN>
+   <PIN pinname="Source distance unit in meter" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Target up axis" slicecount="1" values="Y">
+   </PIN>
+   <PIN pinname="Target right axis" slicecount="1" values="X">
+   </PIN>
+   <PIN pinname="Target distance unit in meter" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="3" componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\GouraudDirectional.fx" nodename=":EFFECTS:\GouraudDirectional.fx" systemname="GouraudDirectional (EX9.Effect)">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="0" left="2745" top="4035" width="0">
+   </BOUNDS>
+   <PIN pinname="Render State" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="| TGouraudDirectional|">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" slicecount="3" values="0,-5,2">
+   </PIN>
+   <PIN pinname="Diffuse Color" slicecount="1" values="|0.85098,0.85098,0.85098,1.00000|">
+   </PIN>
+   <PIN pinname="Ambient Color" slicecount="1" values="|0.14902,0.14902,0.14902,1.00000|">
+   </PIN>
+   <PIN pinname="Specular Color" slicecount="1" values="|0.34902,0.34902,0.34902,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE id="24" componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\ColladaLoader.dll" nodename="Mesh (EX9.Geometry Collada)" systemname="Mesh (EX9.Geometry Collada)">
+   <PIN pinname="TextureFileName" visible="1">
+   </PIN>
+   <PIN pinname="COLLADA Model" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="0" left="2895" top="1725" width="0">
+   </BOUNDS>
+   <BOUNDS type="Box" height="0" left="2895" top="1725" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Transforms" visible="1">
+   </PIN>
+   <BOUNDS type="Window" height="0" left="7050" top="4245" width="0">
+   </BOUNDS>
+   <PIN pinname="Time" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="19" componentmode="InAWindow" hiddenwhenlocked="0" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="0" left="2745" top="4785" width="0">
+   </BOUNDS>
+   <BOUNDS type="Box" height="1800" left="2745" top="4785" width="2400">
+   </BOUNDS>
+   <BOUNDS type="Window" height="4800" left="2790" top="855" width="6120">
+   </BOUNDS>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Depth Buffer">
+   </PIN>
+   <PIN pinname="Global Visual Range">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.43699,0.43699,0.43699,1.00000|">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   </NODE>
+   <NODE id="4" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="0" left="3060" top="3360" width="0">
+   </BOUNDS>
+   <PIN pinname="XYZ" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="COLLADA Model" dstnodeid="24" dstpinname="COLLADA Model">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Transform Out" dstnodeid="3" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="19" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Mesh" dstnodeid="3" dstpinname="Mesh">
+   </LINK>
+   <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="5760" top="4155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Near Plane" slicecount="1" values="1E-005">
+   </PIN>
+   <PIN pinname="Far Plane" slicecount="1" values="600">
+   </PIN>
+   <PIN pinname="Inital Distance" slicecount="1" values="9">
+   </PIN>
+   <PIN pinname="Initial Pitch" slicecount="1" values="0.13">
+   </PIN>
+   <PIN pinname="Initial FOV" slicecount="1" values="0.21">
+   </PIN>
+   <PIN pinname="Initial Yaw" slicecount="1" values="0.33">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="View" dstnodeid="19" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Projection" dstnodeid="19" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Transforms" dstnodeid="4" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="32" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2895" top="795" width="4710" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2895" top="795" width="4710" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="G:\Dropbox\CP_3dmodeling\models\collada\box_model_01.dae" encoded="0">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="23" dstpinname="Filename">
+   </LINK>
+   </PATCH>

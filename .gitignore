@@ -1,7 +1,9 @@
 #################
 ## Eclipse
 #################
-
+*.fbx
+*.xml
+*.c4d
 *.pydevproject
 .project
 .metadata
