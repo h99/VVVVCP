@@ -1,0 +1,275 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.2.dtd" >
+   <PATCH nodename="D:\GitHub\VVVVCP\models\collada\collada_visualizer.v4p" systemname="collada_visualizer" filename="D:\GitHub\VVVVCP\models\collada\collada_visualizer.v4p">
+   <BOUNDS type="Window" left="6105" top="0" width="10380" height="9720">
+   </BOUNDS>
+   <NODE id="5" systemname="ColladaFile (EX9.Geometry)" filename="%VVVV%\lib\nodes\plugins\ColladaLoader.dll" nodename="ColladaFile (EX9.Geometry)" componentmode="Hidden">
+   <PIN pinname="Coordinate system of source" slicecount="1" values="LeftHanded">
+   </PIN>
+   <BOUNDS type="Node" left="5400" top="2280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="COLLADA Model" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="5400" top="2280">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Source up axis" slicecount="1" values="Y">
+   </PIN>
+   <PIN pinname="Source right axis" slicecount="1" values="X">
+   </PIN>
+   <PIN pinname="Target up axis" slicecount="1" values="Y">
+   </PIN>
+   <PIN pinname="Target right axis" slicecount="1" values="X">
+   </PIN>
+   </NODE>
+   <NODE systemname="Dir (File Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\Dir.dll" nodename="Dir (File Advanced)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="225" top="240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mask" slicecount="1" encoded="0" values="*.dae">
+   </PIN>
+   <PIN pinname="Include Subdirectories" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Directory" slicecount="1" encoded="0" values="..\..\..\..\GitHub\VVVVCP\models\collada">
+   </PIN>
+   <BOUNDS type="Box" left="225" top="240">
+   </BOUNDS>
+   <PIN pinname="Update" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Filenames" visible="1">
+   </PIN>
+   <PIN pinname="Short Filenames" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="225" top="1305" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="1305" width="3810" height="1965">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Filenames">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1005" top="705" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1005" top="705" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|File Count|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="File Count" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Mesh (EX9.Geometry Collada)" filename="%VVVV%\lib\nodes\plugins\ColladaLoader.dll" nodename="Mesh (EX9.Geometry Collada)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="5400" top="2775" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="COLLADA Model" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="5400" top="2775">
+   </BOUNDS>
+   <PIN pinname="Skinning Transforms" visible="1">
+   </PIN>
+   <PIN pinname="Transforms" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="COLLADA Model" dstnodeid="4" dstpinname="COLLADA Model">
+   </LINK>
+   <NODE systemname="Skinning (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\Skinning.fx" nodename="Skinning (EX9.Effect)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="7905" top="4320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SkinningMatrices" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="PhongDirectional (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\PhongDirectional.fx" nodename="PhongDirectional (EX9.Effect)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="5400" top="4320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Skinning Transforms" dstnodeid="6" dstpinname="SkinningMatrices" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Transforms" dstnodeid="7" dstpinname="Transform" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Transforms" dstnodeid="6" dstpinname="Transform" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Mesh" dstnodeid="7" dstpinname="Mesh" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Mesh" dstnodeid="6" dstpinname="Mesh" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="5400" top="1335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Filenames" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Short Filenames" dstnodeid="2" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="9" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5400" top="1770" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5400" top="1770" width="2445" height="240">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="9" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="5" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="6075" top="300" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6075" top="300" width="480" height="840">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="33">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="11">
+   <BOUNDS type="Node" left="5400" top="6015" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5400" top="6015" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6120" height="4860">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="still">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="12">
+   <BOUNDS type="Node" left="7905" top="6015" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7905" top="6015" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="4860" width="6120" height="4860">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="anim">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="11" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="12" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="7680" top="5340" width="1500" height="270">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Initial Pitch" slicecount="1" values="0.03">
+   </PIN>
+   <PIN pinname="Initial Yaw" slicecount="1" values="0.59">
+   </PIN>
+   <PIN pinname="Inital Distance" slicecount="1" values="9">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="View" dstnodeid="11" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="View" dstnodeid="12" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Projection" dstnodeid="11" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Projection" dstnodeid="12" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="6900" top="6015" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Actual Backbuffer Width" dstnodeid="14" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Actual Backbuffer Height" dstnodeid="14" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Transform Out" dstnodeid="11" dstpinname="Aspect Ratio">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Transform Out" dstnodeid="12" dstpinname="Aspect Ratio">
+   </LINK>
+   </PATCH>
